@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter_secure_storage: ^8.0.0 # secure storage
   http: ^1.1.0 # api call
+  fluttertoast: ^8.0.8 # toast message
   flutter:
     sdk: flutter
 
