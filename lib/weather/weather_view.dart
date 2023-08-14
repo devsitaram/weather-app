@@ -84,8 +84,7 @@ class _WeatherViewState extends State<WeatherView> {
                 TextButton(
                   onPressed: () async {
                     if (formKey.currentState!.validate()) {
-                      var newWeather =
-                          await WeatherService.getWeather(myController.text);
+                      var newWeather = await WeatherService.getWeather(myController.text);
                       if (newWeather == null) {
                         toastMessage("Weather data not available!");
                       } else {
@@ -110,6 +109,10 @@ class _WeatherViewState extends State<WeatherView> {
             ),
             if (weather != null) // Display weather data if available
               Text("Temperature: ${weather!.main?.temp}"),
+              Text("Temperature: ${weather!.main?.humidity}"),
+              Text("Temperature: ${weather!.main?.pressure}"),
+              Text("Temperature: ${weather!.main?.tempMin}"),
+              Text("Temperature: ${weather!.main?.tempMax}"),
           ],
         ),
       ),
